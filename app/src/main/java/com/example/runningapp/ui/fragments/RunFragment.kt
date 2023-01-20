@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.runningapp.R
 import com.example.runningapp.adapters.RunAdapter
+import com.example.runningapp.other.Constants.REQUEST_BACKGROUND_LOCATION_PERMISSION
 import com.example.runningapp.other.Constants.REQUEST_CODE_LOCATION_PERMISSION
 import com.example.runningapp.other.SortType
 import com.example.runningapp.other.TrackingUtility
@@ -110,8 +111,13 @@ class RunFragment : Fragment(R.layout.fragment_run),EasyPermissions.PermissionCa
                 "You need to accept location permissions to use this app.",
                 REQUEST_CODE_LOCATION_PERMISSION,
                 Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_BACKGROUND_LOCATION
+                Manifest.permission.ACCESS_FINE_LOCATION
+            )
+            EasyPermissions.requestPermissions(
+                this,
+                "You need to accept background location permissions to use this app.",
+                REQUEST_BACKGROUND_LOCATION_PERMISSION,
+                Manifest.permission.ACCESS_BACKGROUND_LOCATION,
             )
         }
     }
