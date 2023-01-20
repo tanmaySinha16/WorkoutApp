@@ -8,16 +8,15 @@ import com.example.runningapp.db.Run
 import com.example.runningapp.other.SortType
 import com.example.runningapp.repository.MainRepository
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 class MainViewModel @ViewModelInject constructor(
     val mainRepository: MainRepository):ViewModel() {
 
-    private val runSortedByDate  = mainRepository.getAllRusSortedByDate()
-    private val runSortedByDistance  = mainRepository.getAllRusSortedByDistance()
-    private val runSortedByCaloriesBurned  = mainRepository.getAllRusSortedByCaloriesBurned()
-    private val runSortedByTimeInMillis  = mainRepository.getAllRusSortedByTimeInMillis()
-    private val runSortedByAvgSpeed  = mainRepository.getAllRusSortedByAvgSpeed()
+    private val runSortedByDate  = mainRepository.getAllRunsSortedByDate()
+    private val runSortedByDistance  = mainRepository.getAllRunsSortedByDistance()
+    private val runSortedByCaloriesBurned  = mainRepository.getAllRunsSortedByCaloriesBurned()
+    private val runSortedByTimeInMillis  = mainRepository.getAllRunsSortedByTimeInMillis()
+    private val runSortedByAvgSpeed  = mainRepository.getAllRunsSortedByAvgSpeed()
 
     val runs = MediatorLiveData<List<Run>>()
     var sortType = SortType.DATE
