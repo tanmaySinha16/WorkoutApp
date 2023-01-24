@@ -279,6 +279,5 @@ class TrackingService:LifecycleService() {
             notificationManager.notify(NOTIFICATION_ID,currNotificationBuilder.build())
         }
 
-
     }
 }

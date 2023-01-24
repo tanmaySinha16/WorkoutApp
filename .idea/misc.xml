@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/drawable/ic_add_black.xml" value="0.2" />
+        <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.208" />
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/drawable/ic_close_white.xml" value="0.2" />
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/drawable/ic_run.xml" value="0.199" />
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
@@ -12,7 +13,7 @@
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/layout/fragment_setup.xml" value="0.2" />
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/layout/fragment_statistics.xml" value="0.23229166666666667" />
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/layout/fragment_tracking.xml" value="0.23229166666666667" />
-        <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/layout/item_run.xml" value="0.23229166666666667" />
+        <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/layout/item_run.xml" value="0.264" />
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Projects/Practice/RunningApp/app/src/main/res/menu/toolbar_tracking_menu.xml" value="0.23229166666666667" />
       </map>

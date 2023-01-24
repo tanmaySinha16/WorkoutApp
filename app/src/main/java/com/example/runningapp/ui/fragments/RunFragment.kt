@@ -8,31 +8,33 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
-import android.widget.AdapterView
-import android.widget.AdapterViewAnimator
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.runningapp.R
 import com.example.runningapp.adapters.RunAdapter
+import com.example.runningapp.db.Run
 import com.example.runningapp.other.Constants.REQUEST_BACKGROUND_LOCATION_PERMISSION
 import com.example.runningapp.other.Constants.REQUEST_CODE_LOCATION_PERMISSION
 import com.example.runningapp.other.SortType
 import com.example.runningapp.other.TrackingUtility
 import com.example.runningapp.ui.viewmodels.MainViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -85,6 +87,37 @@ class RunFragment : Fragment(R.layout.fragment_run),EasyPermissions.PermissionCa
         view.findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
             findNavController().navigate(R.id.action_runFragment_to_trackingFragment)
         }
+
+        val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(
+            ItemTouchHelper.UP or ItemTouchHelper.DOWN, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        ){
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return true
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                val run = runAdapter.differ.currentList[position]
+                viewModel.deleteRun(run)
+
+                Snackbar.make(requireView(),"Successfully deleted run",Snackbar.LENGTH_LONG).apply {
+                    setAction("Undo")
+                    {
+                        viewModel.insertRun(run)
+                    }
+                    show()
+                }
+            }
+
+        }
+        ItemTouchHelper(itemTouchHelperCallback).apply {
+            attachToRecyclerView(requireView().findViewById(R.id.rvRuns))
+        }
+
     }
 
     private fun setupRecyclerView() = view!!.findViewById<RecyclerView>(R.id.rvRuns)!!.apply {
@@ -92,6 +125,16 @@ class RunFragment : Fragment(R.layout.fragment_run),EasyPermissions.PermissionCa
         adapter = runAdapter
         layoutManager = LinearLayoutManager(requireContext())
     }
+
+
+//    private fun deleteRun(run: Run){
+//       viewModel.deleteRun(run)
+//        Snackbar.make(
+//            requireActivity().findViewById(R.id.rootView),
+//            "Run deleted successfully",
+//            Snackbar.LENGTH_LONG
+//        ).show()
+//    }
 
     private fun requestPermissions() {
         if(TrackingUtility.hasLocationPermissions(requireContext())) {
