@@ -127,14 +127,6 @@ class RunFragment : Fragment(R.layout.fragment_run),EasyPermissions.PermissionCa
     }
 
 
-//    private fun deleteRun(run: Run){
-//       viewModel.deleteRun(run)
-//        Snackbar.make(
-//            requireActivity().findViewById(R.id.rootView),
-//            "Run deleted successfully",
-//            Snackbar.LENGTH_LONG
-//        ).show()
-//    }
 
     private fun requestPermissions() {
         if(TrackingUtility.hasLocationPermissions(requireContext())) {
