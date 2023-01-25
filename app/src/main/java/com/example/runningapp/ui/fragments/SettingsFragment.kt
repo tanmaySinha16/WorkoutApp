@@ -23,9 +23,10 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view?.findViewById<Button>(R.id.btnApplyChanges)?.setOnClickListener {
+        loadFieldsFromSharedPref()
+        view.findViewById<Button>(R.id.btnApplyChanges)?.setOnClickListener {
             val success = applyChangesToSharedPref()
-            loadFieldsFromSharedPref()
+
             if(success){
                 Snackbar.make(view,"Saved Changes",Snackbar.LENGTH_LONG).show()
             }
