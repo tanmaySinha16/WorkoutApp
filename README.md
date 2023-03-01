@@ -4,8 +4,7 @@ A running tracker app that allows user to track and monitor their
 running activities, such as distance, time, calories burned and pace.
 
 ### Usage
-- To use NewsApp, follow these steps:
-- To install RunningApp, follow these steps:
+- To use RunningApp, follow these steps:
 - Open the app on your device.</br>
 - Enter your name and weight in the setup screen and click on the "Continue" button.</br>
 - Click on the "Floating action Button" then "Start" button in the tracking screen to start tracking your running activity.</br>
