@@ -20,6 +20,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etSettingsName"
             android:layout_width="match_parent"
+            android:background="@color/white"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Your Name"
@@ -42,8 +43,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@color/white"
             android:hint="Your Weight"
             android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tilName"
+        app:layout_constraintTop_toBottomOf="@+id/tilWeight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSettingsHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Your Height"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tilName"
+        app:layout_constraintTop_toBottomOf="@+id/btnApplyChanges">
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,7 +85,7 @@
         android:text="Apply Changes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilWeight" />
+        app:layout_constraintTop_toBottomOf="@+id/tilHeight" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -63,5 +93,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btnSettingsBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/md_blue_A100"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Calculate BMI"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnApplyChanges"
+        app:layout_constraintVertical_bias="0.263" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

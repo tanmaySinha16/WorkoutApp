@@ -33,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@color/white"
             android:hint="Your Name"
             android:inputType="textPersonName" />
 
@@ -51,6 +52,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Your Weight"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tilName"
+        app:layout_constraintTop_toBottomOf="@+id/tilWeight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Your Height"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tilName"
+        app:layout_constraintTop_toBottomOf="@+id/tilHeight">
+
+        <Button
+            android:id="@+id/btnBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Calculate BMI"
+            android:background="@color/md_blue_A100"
             android:ems="10"
             android:inputType="numberDecimal" />
 
@@ -66,6 +107,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/tilWeight"
         app:layout_constraintLeft_toRightOf="@id/tilWeight"
         app:layout_constraintTop_toTopOf="@+id/tilWeight" />
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="cm"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilHeight"
+        app:layout_constraintLeft_toRightOf="@id/tilHeight"
+        app:layout_constraintTop_toTopOf="@+id/tilHeight" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

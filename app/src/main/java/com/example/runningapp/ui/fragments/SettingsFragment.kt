@@ -34,6 +34,19 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                 Snackbar.make(view,"Please fill out all the fields",Snackbar.LENGTH_LONG).show()
             }
         }
+        view.findViewById<Button>(R.id.btnSettingsBMI).setOnClickListener {
+            val weight = view.findViewById<EditText>(R.id.etSettingsWeight)?.text.toString().toDoubleOrNull()
+            val height = view.findViewById<EditText>(R.id.etSettingsHeight)?.text.toString().toDoubleOrNull()
+
+            if (weight != null && height != null && height > 0 && weight > 0) {
+                val heightInMeters = height / 100
+                val bmi = weight / (heightInMeters * heightInMeters)
+                val bmiFormatted = String.format("%.2f", bmi)
+                view.findViewById<Button>(R.id.btnSettingsBMI).setText("BMI = " +bmiFormatted)
+            } else {
+                view.findViewById<Button>(R.id.btnSettingsBMI).setText("Please provide correct data.")
+            }
+        }
     }
 
     private fun loadFieldsFromSharedPref()
