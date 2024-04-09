@@ -5,6 +5,10 @@
         android:title="Your Runs"
         android:icon="@drawable/ic_run"/>
     <item
+        android:id="@+id/startFragment"
+        android:title="Workout"
+        android:icon="@drawable/ic_dumbbell"/>
+    <item
         android:id="@+id/statisticsFragment"
         android:title="Statistics"
         android:icon="@drawable/ic_graph"/>

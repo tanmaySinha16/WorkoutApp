@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<FrameLayout>(R.id.navHostFragment).findNavController()
             .addOnDestinationChangedListener{ _,destination,_ ->
                 when(destination.id) {
-                    R.id.settingsFragment,R.id.runFragment,R.id.statisticsFragment ->
+                    R.id.settingsFragment,R.id.runFragment,R.id.statisticsFragment,R.id.startFragment ->
                         findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility=
                             View.VISIBLE
                     else -> findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility=

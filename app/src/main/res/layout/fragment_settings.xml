@@ -38,6 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3">
 
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etSettingsWeight"
             android:layout_width="match_parent"
@@ -47,7 +48,18 @@
             android:hint="Your Weight"
             android:inputType="numberDecimal" />
 
+
     </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="kg"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilWeight"
+        app:layout_constraintLeft_toRightOf="@id/tilWeight"
+        app:layout_constraintTop_toTopOf="@+id/tilWeight" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilHeight"
         android:layout_width="wrap_content"
@@ -65,8 +77,18 @@
             android:ems="10"
             android:inputType="numberDecimal" />
 
-    </com.google.android.material.textfield.TextInputLayout>
 
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="cm"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilHeight"
+        app:layout_constraintLeft_toRightOf="@id/tilHeight"
+        app:layout_constraintTop_toTopOf="@+id/tilHeight" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilBMI"
         android:layout_width="wrap_content"
@@ -92,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_begin="366dp" />
 
     <Button
         android:id="@+id/btnSettingsBMI"
@@ -103,6 +125,7 @@
         android:gravity="center"
         android:hint="Calculate BMI"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"

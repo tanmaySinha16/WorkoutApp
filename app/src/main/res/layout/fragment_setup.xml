@@ -91,6 +91,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="Calculate BMI"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:background="@color/md_blue_A100"
             android:ems="10"
             android:inputType="numberDecimal" />
