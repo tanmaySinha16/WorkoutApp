@@ -105,6 +105,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Apply Changes"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilHeight" />
@@ -114,18 +116,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="366dp" />
+        app:layout_constraintGuide_percent="0.32" />
 
     <Button
         android:id="@+id/btnSettingsBMI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/md_blue_A100"
         android:ems="10"
         android:gravity="center"
         android:hint="Calculate BMI"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"

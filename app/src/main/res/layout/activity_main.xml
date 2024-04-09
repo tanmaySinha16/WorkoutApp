@@ -9,9 +9,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
+        android:backgroundTint="@color/md_blue_A700"
         android:layout_height="?android:attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,10 +25,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Workout App"
-                android:textSize="30sp"
                 android:textStyle="bold"
+                android:textSize="30sp"
                 android:gravity="center_vertical"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorAccent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
