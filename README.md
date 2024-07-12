@@ -1,68 +1,91 @@
-# RunningApp
+# WorkoutApp
 
-A running tracker app that allows user to track and monitor their
-running activities, such as distance, time, calories burned and pace.
+WorkoutApp is a comprehensive fitness tracking app that combines the functionalities of a running tracker and a 7-minute workout guide. The app allows users to track and monitor their running activities, view their running history and statistics, and perform high-intensity, full-body exercises designed to be completed in just 7 minutes.
 
-### Usage
-- To use RunningApp, follow these steps:
-- Open the app on your device.</br>
-- Enter your name and weight in the setup screen and click on the "Continue" button.</br>
-- Click on the "Floating action Button" then "Start" button in the tracking screen to start tracking your running activity.</br>
-- During the run, you can see your current location on the map view and the timer will keep track of your running time.</br>
-- Once you are done with the run, click on the "Stop" button to end the tracking.</br>
-- You can view your running history in the "Your Runs" screen and sort them using various filters.</br>
-- You can view your overall statistics in the "Statistics" screen, including total distance ran, total time, total calories burned, and average speed.</br>
-- You can update your name and weight in the "Settings" screen.</br>
+## Usage
 
-### Technologies Used
- #### This app was built using the following technologies:
+To use WorkoutApp, follow these steps:
+
+### Setup
+1. Open the app on your device.
+2. Enter your name and weight in the setup screen and click on the "Continue" button.
+
+### Running Tracker
+1. Click on the "Floating Action Button" then "Start" button in the tracking screen to start tracking your running activity.
+2. During the run, you can see your current location on the map view and the timer will keep track of your running time.
+3. Once you are done with the run, click on the "Stop" button to end the tracking.
+4. View your running history in the "Your Runs" screen and sort them using various filters.
+5. View your overall statistics in the "Statistics" screen, including total distance ran, total time, total calories burned, and average speed.
+
+### 7-Minute Workout
+1. On the home screen, tap the "Start Workout" button to begin your 7-minute workout.
+2. Follow the on-screen instructions to complete each exercise.
+3. View your workout history and BMI calculation by tapping on the corresponding buttons on the home screen.
+
+### Settings
+- Update your name and weight in the "Settings" screen.
+
+## Technologies Used
+
+WorkoutApp was built using the following technologies:
 - Android Jetpack Components
 - MVVM architecture
 - Navigation Components
 - Retrofit
 - Google Maps API
-- Kotlin 
+- Kotlin
 - RecyclerView
 - Dagger-Hilt for dependency injection
-- Kotlin Couroutines
+- Kotlin Coroutines
 
-### Screenshots
+## Screenshots
 
-#### Run Fragment
-This fragment will show list of saved runs and the runs can also be sorted using date, running Time , distance, average speed and calories burned.It contains a spinner which the user uses to sort their runs. 
-
+### Run Fragment
+This fragment shows a list of saved runs, which can be sorted using various filters such as date, running time, distance, average speed, and calories burned.
 
 <img src="https://res.cloudinary.com/dixttklud/image/upload/v1674788355/RunningAppSS/Screenshot_20230126-110023_RunningApp_nlwwm1.jpg" width="20%" height="20%">
 
-#### Tracking Fragment
-In this fragment the user can see his location in the mapView and can stop or pause the run.The users can also see a stopwatch for the reference and there is also a foreground service running which the tracks the location of the user in the background.
+### Tracking Fragment
+In this fragment, users can see their location on a map and stop or pause the run. A stopwatch is also available for reference, and a foreground service runs in the background to track the user's location.
 
 <img src="https://res.cloudinary.com/dixttklud/image/upload/v1674788372/RunningAppSS/Screenshot_20230126-110101_RunningApp_mkrosf.jpg" width="20%" height="20%">
 
-#### Statistics Fragment 
-In Statistics Fragment the user can see his statistics of the user's total runs such as total average speed , total time ran , total calories burned and total distance ran.
+### Statistics Fragment
+This fragment displays statistics of the user's total runs, such as total average speed, total time ran, total calories burned, and total distance ran.
 
 <img src="https://res.cloudinary.com/dixttklud/image/upload/v1674788390/RunningAppSS/Screenshot_20230126-110122_RunningApp_hl9122.jpg" width="20%" height="20%">
 
-
-#### Setup Fragment
-In this fragment the user can store the data(name and weight).Shared Preferences is used to store and update the data.
+### Setup Fragment
+In this fragment, users can store their data (name and weight). Shared Preferences are used to store and update the data.
 
 <img src="https://res.cloudinary.com/dixttklud/image/upload/v1675011114/RunningAppSS/Screenshot_20230129_221931_zl0frd.png" width="20%" height="20%">
 
-### Setting Fragment
-In setting Fragment the user can update the data(name and weight).
+### Settings Fragment
+In this fragment, users can update their data (name and weight).
 
-<img src="https://res.cloudinary.com/dixttklud/image/upload/v1675011114/RunningAppSS/Screenshot_20230129_222100_vfw6vj.png" width="20%" height="20%">
+<img src="https://res.cloudinary.com/dixttklud/image/upload/v1720790179/Settings_p0tbhp.png" width="20%" height="20%">
 
-### Installation
-To install RunningApp, follow these steps:
+### Home Screen
 
-- Clone the repository to your local machine using git clone https://github.com/tanmaySinha16/WorkoutApp.git.</br>
-- Open the project in Android Studio.</br>
-- Build and run the app on an emulator or physical device.</br>
+<img src="https://res.cloudinary.com/dixttklud/image/upload/v1720790007/7MinHomeScreen_nbrlnq.png" width="20%" height="20%">
 
-Note: Make sure to allow location permissions for the app to track your running activity.</br>
 
-### Conclusion
-This app is a great tool for runners who want to keep track of their running activity and improve their performance. It uses modern Android development practices and libraries to provide a seamless and user-friendly experience.
+### Exercise Activity
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dixttklud/image/upload/v1720790459/Screenshot_20240712_184906_osgogo.png" width="20%" height="20%">
+  <img src="https://res.cloudinary.com/dixttklud/image/upload/v1720790459/Screenshot_20240712_184917_nhfji6.png" width="20%" height="20%">
+</p>
+
+## Installation
+
+To install WorkoutApp, follow these steps:
+1. Clone the repository to your local machine using `git clone https://github.com/tanmaySinha16/WorkoutApp.git`.
+2. Open the project in Android Studio.
+3. Build and run the app on an emulator or physical device.
+
+Note: Make sure to allow location permissions for the app to track your running activity.
+
+## Conclusion
+
+WorkoutApp is a great tool for fitness enthusiasts who want to keep track of their running activity and improve their performance while also benefiting from high-intensity, full-body workouts. It uses modern Android development practices and libraries to provide a seamless and user-friendly experience.
