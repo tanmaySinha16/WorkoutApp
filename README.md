@@ -58,7 +58,7 @@ In setting Fragment the user can update the data(name and weight).
 ### Installation
 To install RunningApp, follow these steps:
 
-- Clone the repository to your local machine using git clone https://github.com/[your-github-username]/RunningApp.git.</br>
+- Clone the repository to your local machine using git clone https://github.com/tanmaySinha16/WorkoutApp.git.</br>
 - Open the project in Android Studio.</br>
 - Build and run the app on an emulator or physical device.</br>
 
